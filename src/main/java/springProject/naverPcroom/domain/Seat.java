@@ -6,16 +6,17 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.validation.constraints.NotEmpty;
 
 @Entity
 @Getter
-public class Serving {
+public class Seat {
 
     @Id @GeneratedValue
-    @Column(name = "serving_id")
+    @Column(name = "seat_id")
     private Long id;
 
-    private Order order;
+    private String loginId;
 
-    private ServingStatus status;
+    private SeatStatus status;
 }
